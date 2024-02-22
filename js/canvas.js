@@ -16,7 +16,13 @@ function retrieveCanvasData() {
 function resizeCanvas() {
 	if (!retrieveCanvasData()) return
 	canvas.width = 0;
-    canvas.height = 0;
-    canvas.width = document.getElementById("treeTab").scrollWidth;
-    canvas.height = document.getElementById("treeTab").scrollHeight;
+	canvas.height = 0;
+    	canvas.width = document.getElementById("treeTab").scrollWidth;
+    	canvas.height = document.getElementById("treeTab").scrollHeight;
+	drawTree();
+}
+
+function drawTree() {
+	if(!retrieveCanvasData()) return;
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
