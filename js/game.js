@@ -8,7 +8,7 @@ function startPlayer() {
 		time: Date.now(),
 		offlineProduction: true,
 		timePlayed: 0,
-		points: 10,
+		points: new Decimal(10),
 		tree1: {
 			upgrades: [],
 		},
