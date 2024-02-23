@@ -1,5 +1,6 @@
 //Player stores most of the data from the game and is used to make save files
 var player;
+var tmp{};
 
 //Default save file for the beginning of the game
 function startPlayer() {
@@ -45,6 +46,8 @@ function gameLoop(diff) {
 	if(isNAN(diff)) diff = 0
 	addTime(diff)
 	if(diff === 0) return
+
+	if (player.tree1.upgrades.includes(11)) player.points = player.points.add(tmp.pointGen.times(diff)).max(0)
 }
 
 //Autosave timer
