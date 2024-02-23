@@ -31,6 +31,8 @@ function load() {
 		player.offTime.remain += (Date.now() - player.time) / 1000
 	}
 	player.time = Date.now()
+	updateTemp();
+	loadVue();
 }
 
 //Increases timePlayed in player. Called by gameLoop
@@ -39,6 +41,11 @@ function addTime(diff) {
 	let time = data.timePlayed
 	time += toNumber(diff)
 	data.timePlayed = time
+}
+
+function getPointGen() {
+	let gain = new Decimal(1)
+	return gain
 }
 
 //
