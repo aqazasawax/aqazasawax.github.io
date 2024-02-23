@@ -7,7 +7,7 @@ function loadVue() {
                         <button v-if="onTab(tab)" 
                                 v-bind:id="upg"
                                 v-on:click="function() {
-                                        if (canAfford(index)) index.purchased = true;
+                                        if (canAfford(index.costType, tab, index)) index.purchased = true;
                                 }"
                                 ></button>
                 `
