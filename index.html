@@ -4,14 +4,19 @@
         <title>Big Tree</title>
         <link rel="stylesheet" href="style.css">
         <script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <script defer src="js/break_eternity.js"></script>
+        <script defer src="js/canvas.js"></script>
+        <script defer src="js/func.js"></script>
         <script defer src="js/game.js"></script>
         <script defer src="js/temp.js"></script>
-        <script defer sre="js/canvas.js"></script>
+        <script defer src="js/upgrades.js"></script>
+        <script defer src="js/v.js"></script>
+        
     </head>
-    <body>
+    <body onload="load()">
         <div id="app">
             <div id="treeTab">
-                <button type="button" onclick="alert('alert')">test</button>
+                <upgrade index='11' tab='tree1'>description</upgrade>
                 <div id="treeCanvas" class="canvas"></div>
             </div>
         </div>
