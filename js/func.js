@@ -1,6 +1,6 @@
 // returns true if current tab is tab
 function onTab(tab) {
-        return player[tab] == tab;
+        return player.currentTab == tab;
 }
 
 // returns true if you can buy an upgrade
