@@ -11,6 +11,7 @@ function startPlayer() {
 		timePlayed: 0,
 		points: new Decimal(10),
 		tree1: {
+			active: true,
 			upgrades: [],
 		},
 	}
