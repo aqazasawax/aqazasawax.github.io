@@ -49,6 +49,9 @@ function getPointGen() {
 	return gain
 }
 
+function format(num) {
+	return num
+}
 //
 function gameLoop(diff) {
 	if(isNAN(diff)) diff = 0
