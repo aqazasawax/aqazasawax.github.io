@@ -20,6 +20,7 @@ function loadVue() {
                 data: {
                         player,
                         format,
+                        tmp,
                         UPGRADES
                 },
         })
