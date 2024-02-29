@@ -15,7 +15,11 @@
     </head>
     <body onload="load()">
         <div id="app">
-            <h2 id="points">{{format(player.points)}}</h2>
+            <br>
+			<span v-if="player.points.lt('1e1000')">You have </span>
+			<h2 id="points">{{format(player.points)}}</h2>
+			<span v-if="player.points.lt('1e1e6')"> points</span>
+			<br>
             <div id="treeTab" v-if:onTab(tree1)>
                 <upgrade index='11' tab='tree1'></upgrade>
                 <button v-on:click="purchased = true" v-bind:class="{bought: purchased}">press m</button>
