@@ -6,8 +6,11 @@ function loadVue() {
                 template: `
                         <button 
                                 v-bind:id="index"
-                                >
-                                description
+                                v-bind:class"{
+                                        button: true,
+                                        [index]: true
+                                }">
+                                {{index}}
                         </button>
                 `
         })
