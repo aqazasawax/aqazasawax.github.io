@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Big Tree</title>
-        <link rel="stylesheet" href="style.css">
-        <script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-        <script defer src="js/break_eternity.js"></script>
-        <script defer src="js/canvas.js"></script>
-        <script defer src="js/func.js"></script>
-        <script defer src="js/game.js"></script>
-        <script defer src="js/temp.js"></script>
-        <script defer src="js/upgrades.js"></script>
-        <script defer src="js/v.js"></script>
+	<head>
+		<title>Big Tree</title>
+        	<link rel="stylesheet" href="style.css">
+        	<script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        	<script defer src="js/break_eternity.js"></script>
+        	<script defer src="js/canvas.js"></script>
+        	<script defer src="js/func.js"></script>
+        	<script defer src="js/game.js"></script>
+        	<script defer src="js/temp.js"></script>
+        	<script defer src="js/upgrades.js"></script>
+        	<script defer src="js/v.js"></script>
         
-    </head>
-    <body onload="load()">
-        <div id="app">
-            <br>
-			<span v-if="player.points.lt('1e1000')">You have </span>
-			<h2 id="points">{{format(player.points)}}</h2>
-			<span v-if="player.points.lt('1e1e6')"> points</span>
-			<br>
-            <div id="treeTab" v-if:onTab(tree1)>
-                <upgrade index='11' tab='tree1'></upgrade>
-                <button v-on:click="purchased = true" v-bind:class="{bought: purchased}">press m</button>
-                <canvas id="treeCanvas" class="canvas"></canvas>
-            </div>
-        </div>
-    </body>
+    	</head>
+    	<body onload="load()">
+        	<div id="app">
+        		<div id="treeTab" onscroll="resizeCanvas()">
+				<span v-if="player.points.lt('1e1000')">You have </span>
+				<h2 id="points">{{format(player.points)}}</h2>
+				<span v-if="player.points.lt('1e1e6')"> points</span>
+				<table>
+                			<td><upgrade index='11' tab='tree1'></upgrade></td>
+				</table>
+                		<button v-on:click="purchased = true" v-bind:class="{bought: purchased}">press m</button>
+               		 	<canvas id="treeCanvas" class="canvas"></canvas>
+            		</div>
+        	</div>
+    	</body>
 </html>
