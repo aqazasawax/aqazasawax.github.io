@@ -5,7 +5,7 @@ function loadVue() {
                 props: ['index', 'tab'],
                 template: `
                         <button 
-                                v-bind:id="upg"
+                                v-bind:id="index"
                                 >
                                 description
                         </button>
