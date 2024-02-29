@@ -21,3 +21,8 @@ button:hover {
   height: 50px;
   border: 5px;
 }
+
+.bought {
+  background: #77bf5f !important;
+	background-color: #77bf5f !important;
+}
