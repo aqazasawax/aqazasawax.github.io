@@ -17,7 +17,7 @@ function loadVue() {
 app = Vue.createApp({
     data() {
       return {
-        points = player.points
+        points: player.points
       }
     }
 })
