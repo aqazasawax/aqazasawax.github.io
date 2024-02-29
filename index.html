@@ -25,6 +25,15 @@
                 		<button v-on:click="purchased = true" v-bind:class="{bought: purchased}">press m</button>
                		 	<canvas id="treeCanvas" class="canvas"></canvas>
             		</div>
+			<div v-for="tree in Object.keys(UPGRADES)">
+				<div v-if="player[tree].active">
+					<div v-if="UPGRADES[layer]">
+						<div v-for="upg in Object.keys(player[tree].upgrades)">
+							<button v-on:click="buyUpg(tree, upg)">{{ UPGRADES[tree][upg].desc }}</button>
+						</div>
+					</div>
+				</div>
+			</div>
         	</div>
     	</body>
 </html>
