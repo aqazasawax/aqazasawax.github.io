@@ -12,13 +12,12 @@ function loadVue() {
                                 ></button>
                 `
         })
-}
 
-app = Vue.createApp({
-    data() {
-      return {
-        points: player.points
-      }
-    }
-})
-app.mount('#app')
+        app = new Vue({
+                el: "#app",
+                data: {
+                        player,
+                        format
+                },
+        })
+}
