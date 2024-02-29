@@ -29,7 +29,7 @@
 				<div v-if="player[tree].active">
 					<div v-if="UPGRADES[tree]">
 						<div v-for="upg in Object.keys(player[tree].upgrades)">
-							<button v-on:click="buyUpg(tree, upg)">{{ UPGRADES[tree][upg].desc }}</button>
+							<button v-on:click="buyUpg(tree, upg)">{ UPGRADES[tree][upg].desc }</button>
 						</div>
 					</div>
 				</div>
