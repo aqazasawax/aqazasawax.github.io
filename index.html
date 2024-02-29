@@ -15,6 +15,7 @@
     </head>
     <body onload="load()">
         <div id="app">
+            <h1>Points: {{player.points}}</h1>
             <div id="treeTab" v-if:onTab(tree1)>
                 <upgrade index='11' tab='tree1'>descrip</upgrade>
                 <button v-on:click="function() { if (canAfford(index.costType, tab, index)) index.purchased = true; }">press</button>
