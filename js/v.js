@@ -18,7 +18,8 @@ function loadVue() {
                 el: "#app",
                 data: {
                         player,
-                        format
+                        format,
+                        UPGRADES
                 },
         })
 }
