@@ -17,6 +17,7 @@
         <div id="app">
             <div id="treeTab">
                 <upgrade index='11' tab='tree1'>description</upgrade>
+                <button v-on:click="function() { if (canAfford(index.costType, tab, index)) index.purchased = true; }">press</button>
                 <div id="treeCanvas" class="canvas"></div>
             </div>
         </div>
