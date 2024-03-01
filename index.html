@@ -12,6 +12,17 @@
         	<script defer src="js/temp.js"></script>
         	<script defer src="js/upgrades.js"></script>
         	<script defer src="js/v.js"></script>
+		<script type="module">
+			import { createApp } from 'vue'
+
+			createApp({
+  				data() {
+    					return {
+      						player: 0
+    					}
+  				}
+			}).mount('#app')
+		</script>
         
     	</head>
     	<body onload="load()">
