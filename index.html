@@ -18,7 +18,7 @@
         	<div id="app">
         		<div id="treeTab" onscroll="resizeCanvas()">
 				<span v-if="player.points.lt('1e1000')">You have </span>
-				<h2 id="points">{{ player.points }}</h2>
+				<h2 id="points">{{ player }}</h2>
 				<span v-if="player.points.lt('1e1e6')"> points</span>
 				<table>
                 			<td><upgrade index='11' tab='tree1'></upgrade></td>
@@ -30,7 +30,7 @@
 				<div v-if="player[tree].active">
 					<div v-if="UPGRADES[tree]">
 						<div v-for="upg in Object.keys(player[tree].upgrades)">
-							<button v-on:click="buyUpg(tree, upg)">{ UPGRADES[tree][upg].desc }</button>
+							<button v-on:click="buyUpg(tree, upg)">{{ UPGRADES[tree][upg].desc }}</button>
 						</div>
 					</div>
 				</div>
