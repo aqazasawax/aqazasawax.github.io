@@ -18,7 +18,7 @@
         	<div id="app">
         		<div id="treeTab" onscroll="resizeCanvas()">
 				<span v-if="player.points.lt('1e1000')">You have </span>
-				<h2 id="points">{{playerPoints}}</h2>
+				<h2 id="points">{{ player.points }}</h2>
 				<span v-if="player.points.lt('1e1e6')"> points</span>
 				<table>
                 			<td><upgrade index='11' tab='tree1'></upgrade></td>
