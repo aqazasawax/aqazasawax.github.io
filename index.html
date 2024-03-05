@@ -10,8 +10,9 @@
   </head>
   <body onload="load()">
     <div id="app">
-      <upgrade-button id ='11' desc='hello world'></upgrade-button>
-      <button>hi</button>
+      <button @click="count++">
+        Count is: {{ count }}
+      </button>
     </div>
   </body>
 </html>
