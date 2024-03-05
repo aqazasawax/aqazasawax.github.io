@@ -1,20 +1,9 @@
-var app;
+import { createApp } from 'vue'
 
-function loadVue() {
-  Vue.component('upgrade-button', {
-    props: ['id', 'desc'],
-    template: `
-    <button>
-    {{desc}}
-    </button>
-    `
-  })
-
-  app = new Vue({
-    el: "#app",
-    data: {
-      player,
-      UPGRADES
-    },
-  })
-}
+createApp({
+  data() {
+    return {
+      count: 0
+    }
+  }
+}).mount('#app')
